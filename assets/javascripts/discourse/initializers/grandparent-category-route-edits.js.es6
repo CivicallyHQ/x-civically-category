@@ -7,7 +7,6 @@ export default {
   name: 'grandparent-category-route-edits',
   initialize(container) {
     const site = container.lookup('site:main');
-    const siteSettings = container.lookup('site-settings:main');
 
     let discoveryCategoryRoutes = [
       'CategoryWithGrandparent',
@@ -140,4 +139,4 @@ export default {
       });
     });
   }
-}
+};

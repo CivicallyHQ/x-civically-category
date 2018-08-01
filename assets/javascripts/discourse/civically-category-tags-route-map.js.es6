@@ -7,4 +7,4 @@ export default {
       this.route('showCategoryWithGrandparent' + filter.capitalize(), { path: '/c/:grandparent_category/:parent_category/:category/:tag_id/l/' + filter });
     });
   }
-}
+};

@@ -14,4 +14,4 @@ export default {
 
     this.route('categoryWithGrandparent', { path: '/c/:grandparentSlug/:parentSlug/:slug' });
   }
-}
+};

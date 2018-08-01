@@ -8,7 +8,6 @@ export default {
     Category.reopenClass({
       findBySlug(slug, parentSlug, grandparentSlug) {
         const categories = Category.list();
-        let category;
 
         if (grandparentSlug) {
           const grandparentCategory = Category.findSingleBySlug(grandparentSlug);
@@ -32,9 +31,9 @@ export default {
       },
 
       reloadBySlug(slug, parentSlug, grandparentSlug) {
-        if (grandparentSlug && parentSlug) return ajax(`/c/${grandparentSlug}/${parentSlug}/${slug}/find_by_slug.json`)
+        if (grandparentSlug && parentSlug) return ajax(`/c/${grandparentSlug}/${parentSlug}/${slug}/find_by_slug.json`);
         return parentSlug ? ajax(`/c/${parentSlug}/${slug}/find_by_slug.json`) : ajax(`/c/${slug}/find_by_slug.json`);
       }
-    })
+    });
   }
-}
+};
